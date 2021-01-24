@@ -80,7 +80,7 @@ use core::pin::Pin;
 use core::task::{Context, Poll};
 #[cfg(feature = "futures")]
 use futures_io as io;
-#[cfg(feature = "tokio")]
+#[cfg(not(feature = "futures"))]
 use tokio::io;
 
 pub use byteorder::{BigEndian, LittleEndian, NativeEndian, NetworkEndian};
